@@ -35,3 +35,15 @@ logs-c:
 
 logs-f:
 	docker-compose logs -f
+
+npm-install:
+	@make npm-install-for-container
+	@make npm-install-for-host
+
+npm-install-for-container:
+	docker-compose exec node npm install
+
+	# Makefileでは変数展開は実行前に行われてしまうので $$(pwd) のように $$ 2個付ける
+	# :/code -w /code このcodeの部分dockerのマウントさせるディクレトリを指定している
+npm-install-for-host:
+	docker-compose run --rm -v $$(pwd)/./react:/code -w /code node npm install
