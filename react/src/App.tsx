@@ -1,5 +1,6 @@
-import logo from "./logo.svg";
+import logo from "assets/logo.svg";
 import "./App.css";
+import TestButton from "components/TestButton";
 
 const App = (): JSX.Element => {
   return (
@@ -17,6 +18,7 @@ const App = (): JSX.Element => {
         >
           Learn React
         </a>
+        <TestButton>I am child :)</TestButton>
       </header>
     </div>
   );
