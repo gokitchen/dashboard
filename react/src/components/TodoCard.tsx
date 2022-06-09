@@ -3,27 +3,33 @@ import { Box } from "@mui/material";
 import { TextField } from "@mui/material";
 import SaveIcon from "@mui/icons-material/Save";
 import DeleteIcon from "@mui/icons-material/Delete";
-
 const TodoCard = (): JSX.Element => {
   return (
-    <Box sx={{ borderRadius: 2, maxWidth: 250, maxHeight: 250 }}>
+    <Box sx={{ width: 400, height: 600, margin: 2 }}>
       <Card variant="outlined">
         <CardContent>
-          <TextField fullWidth label="Title" id="fullWidth" />
           <TextField
-            id="filled-textarea"
-            label="Multiline Placeholder"
-            placeholder="Placeholder"
-            multiline
-            variant="filled"
+            variant="outlined"
+            label="Title"
+            id="standard"
+            sx={{ margin: 2 }}
           />
-          <IconButton color="primary" aria-label="save edited">
-            <SaveIcon />
-          </IconButton>
-          <IconButton color="secondary" aria-label="delete item">
-            <DeleteIcon />
-          </IconButton>
+          <TextField
+            id="outlined-textarea-static"
+            label="contents"
+            placeholder="Placeholder"
+            maxRows={4}
+            multiline
+            variant="outlined"
+            sx={{ margin: 2 }}
+          />
         </CardContent>
+        <IconButton color="primary" aria-label="save edited">
+          <SaveIcon />
+        </IconButton>
+        <IconButton color="secondary" aria-label="delete item">
+          <DeleteIcon />
+        </IconButton>
       </Card>
     </Box>
   );
