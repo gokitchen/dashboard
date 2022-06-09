@@ -1,6 +1,7 @@
 import { Paper, Fab } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import { useState } from "react";
+import TodoCard from "components/TodoCard";
 
 type Item = {
   title: string;
@@ -25,7 +26,11 @@ const DashBoard = (): JSX.Element => {
 
   return (
     <>
-      <Paper>{todos.map((v) => v.title)}</Paper>
+      <Paper>
+        {todos.map((value, index) => {
+          return <TodoCard key={index} {...value}></TodoCard>;
+        })}
+      </Paper>
       <Fab
         color="primary"
         aria-label="add"

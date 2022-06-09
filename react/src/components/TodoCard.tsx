@@ -3,7 +3,12 @@ import { Box } from "@mui/material";
 import { TextField } from "@mui/material";
 import SaveIcon from "@mui/icons-material/Save";
 import DeleteIcon from "@mui/icons-material/Delete";
-const TodoCard = (): JSX.Element => {
+
+type Props = {
+  title: string;
+  text: string;
+};
+const TodoCard = ({ title, text }: Props): JSX.Element => {
   return (
     <Box sx={{ width: 400, height: 600, margin: 2 }}>
       <Card variant="outlined">
@@ -13,6 +18,7 @@ const TodoCard = (): JSX.Element => {
             label="Title"
             id="standard"
             sx={{ margin: 2 }}
+            value={title}
           />
           <TextField
             id="outlined-textarea-static"
@@ -22,6 +28,7 @@ const TodoCard = (): JSX.Element => {
             multiline
             variant="outlined"
             sx={{ margin: 2 }}
+            value={text}
           />
         </CardContent>
         <IconButton color="primary" aria-label="save edited">
