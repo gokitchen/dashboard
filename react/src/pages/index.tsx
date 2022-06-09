@@ -1,8 +1,8 @@
 import logo from "assets/logo.svg";
-import "./App.css";
+import "./index.css";
 import TestButton from "components/TestButton";
 
-const App = (): JSX.Element => {
+const Top = (): JSX.Element => {
   return (
     <div className="App">
       <header className="App-header">
@@ -18,10 +18,10 @@ const App = (): JSX.Element => {
         >
           Learn React
         </a>
-        <TestButton>I am child :)</TestButton>
+        <TestButton link="/home">I am child :)</TestButton>
       </header>
     </div>
   );
 };
 
-export default App;
+export default Top;
