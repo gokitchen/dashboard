@@ -1,4 +1,10 @@
-import { ButtonGroup, Card, CardContent, IconButton } from "@mui/material";
+import {
+  ButtonGroup,
+  Card,
+  CardContent,
+  IconButton,
+  SxProps,
+} from "@mui/material";
 import { TextField } from "@mui/material";
 import SaveIcon from "@mui/icons-material/Save";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -6,30 +12,11 @@ import DeleteIcon from "@mui/icons-material/Delete";
 type Props = {
   title: string;
   text: string;
-  divide?: number;
-  marginLeft: string;
+  sx: SxProps;
 };
-const TodoCard = ({
-  title,
-  text,
-  divide = 1,
-  marginLeft,
-}: Props): JSX.Element => {
+const TodoCard = ({ title, text, sx }: Props): JSX.Element => {
   return (
-    <Card
-      component="li"
-      variant="outlined"
-      sx={{
-        width: `calc(100%/ ${divide})`,
-        marginLeft,
-        ":first-of-type": {
-          marginLeft: 0,
-        },
-        ":nth-of-type(${divide}n)": {
-          marginLeft: 0,
-        },
-      }}
-    >
+    <Card component="li" variant="outlined" sx={sx}>
       <CardContent>
         <TextField
           variant="outlined"

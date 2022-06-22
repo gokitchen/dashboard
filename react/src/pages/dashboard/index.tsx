@@ -27,12 +27,13 @@ const DashBoard = (): JSX.Element => {
   return (
     <>
       {todos.length ? (
-        <Paper sx={{ padding: "10px" }}>
+        <Paper sx={{ padding: "10px 20px" }}>
           <List
             sx={{
               display: "flex",
               alignItems: "top",
               flexWrap: "wrap",
+              justifyContent: "space-around",
             }}
           >
             {todos.map((value, index) => {
@@ -40,8 +41,7 @@ const DashBoard = (): JSX.Element => {
                 <TodoCard
                   key={index}
                   {...value}
-                  divide={3}
-                  marginLeft="15px"
+                  sx={{ width: "calc(100% / 3 - 20px)", margin: "20px 0" }}
                 ></TodoCard>
               );
             })}
