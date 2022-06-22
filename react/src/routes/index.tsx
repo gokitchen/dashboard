@@ -7,8 +7,8 @@ import { Routes, Route } from "react-router-dom";
 const Routing = (): JSX.Element => {
   return (
     <Routes>
+      <Route path="/" element={<Login />} />
       <Route element={<Layout />}>
-        <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/dashboard" element={<DashBoard />} />
       </Route>
