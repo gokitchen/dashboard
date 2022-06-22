@@ -38,7 +38,10 @@ const TodoCard = ({ title, text, sx }: Props): JSX.Element => {
           defaultValue={text}
         />
       </CardContent>
-      <ButtonGroup>
+      <ButtonGroup
+        fullWidth
+        sx={{ justifyContent: "flex-end", padding: "0 10px 5px" }}
+      >
         <IconButton color="primary" aria-label="save edited">
           <SaveIcon />
         </IconButton>

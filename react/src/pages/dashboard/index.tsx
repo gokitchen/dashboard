@@ -33,7 +33,7 @@ const DashBoard = (): JSX.Element => {
               display: "flex",
               alignItems: "top",
               flexWrap: "wrap",
-              justifyContent: "space-around",
+              justifyContent: "space-between",
             }}
           >
             {todos.map((value, index) => {
