@@ -13,6 +13,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Copyright from "components/Copyright";
+import { Link as LinkRouter } from "react-router-dom";
 
 const theme = createTheme();
 
@@ -102,19 +103,23 @@ const Top = (): JSX.Element => {
                 />
               </Grid>
             </Grid>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Sign Up
-            </Button>
+            <LinkRouter to="/dashboard">
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Sign Up
+              </Button>
+            </LinkRouter>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
-                  Already have an account? Sign in
-                </Link>
+                <LinkRouter to="/dashboard">
+                  <Link component="p" variant="body2">
+                    Already have an account? Sign in
+                  </Link>
+                </LinkRouter>
               </Grid>
             </Grid>
           </Box>

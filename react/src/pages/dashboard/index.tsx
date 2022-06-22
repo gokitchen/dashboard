@@ -33,7 +33,7 @@ const DashBoard = (): JSX.Element => {
               display: "flex",
               alignItems: "top",
               flexWrap: "wrap",
-              justifyContent: "space-between",
+              justifyContent: "flex-start",
             }}
           >
             {todos.map((value, index) => {
@@ -41,7 +41,7 @@ const DashBoard = (): JSX.Element => {
                 <TodoCard
                   key={index}
                   {...value}
-                  sx={{ width: "calc(100% / 3 - 20px)", margin: "20px 0" }}
+                  sx={{ width: "calc(100% / 3 - 20px)", margin: "20px 10px" }}
                 ></TodoCard>
               );
             })}

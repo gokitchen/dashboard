@@ -1,6 +1,10 @@
-import { Link, Typography } from "@mui/material";
+import { Link, SxProps, Typography } from "@mui/material";
 
-const Copyright = (props: any): JSX.Element => {
+type Props = {
+  sx?: SxProps;
+};
+
+const Copyright = (props: Props): JSX.Element => {
   return (
     <Typography
       variant="body2"
