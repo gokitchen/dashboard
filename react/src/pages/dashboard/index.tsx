@@ -1,6 +1,6 @@
-import { Paper, Fab } from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
 import { useState } from "react";
+import { Paper, Fab, List } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
 import TodoCard from "components/TodoCard";
 
 type Item = {
@@ -26,11 +26,30 @@ const DashBoard = (): JSX.Element => {
 
   return (
     <>
-      <Paper>
-        {todos.map((value, index) => {
-          return <TodoCard key={index} {...value}></TodoCard>;
-        })}
-      </Paper>
+      {todos.length ? (
+        <Paper sx={{ padding: "10px" }}>
+          <List
+            sx={{
+              display: "flex",
+              alignItems: "top",
+              flexWrap: "wrap",
+            }}
+          >
+            {todos.map((value, index) => {
+              return (
+                <TodoCard
+                  key={index}
+                  {...value}
+                  divide={3}
+                  marginLeft="15px"
+                ></TodoCard>
+              );
+            })}
+          </List>
+        </Paper>
+      ) : (
+        ""
+      )}
       <Fab
         color="primary"
         aria-label="add"
