@@ -17,7 +17,7 @@ import { Link as LinkRouter } from "react-router-dom";
 
 const theme = createTheme();
 
-const Top = (): JSX.Element => {
+const Login = (): JSX.Element => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -130,4 +130,4 @@ const Top = (): JSX.Element => {
   );
 };
 
-export default Top;
+export default Login;

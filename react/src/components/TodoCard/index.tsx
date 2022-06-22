@@ -12,7 +12,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 type Props = {
   title: string;
   text: string;
-  sx: SxProps;
+  sx?: SxProps;
 };
 const TodoCard = ({ title, text, sx }: Props): JSX.Element => {
   return (

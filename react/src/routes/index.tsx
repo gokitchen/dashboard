@@ -1,14 +1,14 @@
 import Layout from "components/Layout";
-import DashBoard from "pages/dashboard";
-import Home from "pages/home";
-import Top from "pages/index";
+import DashBoard from "features/dashboard";
+import Home from "features/home";
+import Login from "features/login";
 import { Routes, Route } from "react-router-dom";
 
 const Routing = (): JSX.Element => {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route path="/" element={<Top />} />
+        <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/dashboard" element={<DashBoard />} />
       </Route>
