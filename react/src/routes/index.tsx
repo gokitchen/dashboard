@@ -1,7 +1,7 @@
 import Layout from "components/Layout";
-import DashBoard from "pages/dashboard";
-import Home from "pages/home";
-import Top from "pages/index";
+import DashBoard from "features/dashboard";
+import Home from "features/home";
+import Top from "features/login";
 import { Routes, Route } from "react-router-dom";
 
 const Routing = (): JSX.Element => {
